@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import style from '../../styles/AsideMenu.module.scss'
 import OpenButton from './OpenButton'
-import requestRefresh from '../../pages/_requestRefresh'
+import requestRefresh from '../../pages/api/login/requestRefresh'
 
 export default function AsideMenu() {
 

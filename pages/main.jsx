@@ -3,7 +3,7 @@ import { useEffect, useState, useRef } from 'react'
 import style from '../styles/Main.module.scss'
 import AsideMenu from '../src/components/AsideMenu'
 import Controller from '../src/components/Controller'
-import requestRefresh from './_requestRefresh'
+import requestRefresh from './api/login/requestRefresh'
 
 let accessToken = ''
 
