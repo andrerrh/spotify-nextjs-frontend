@@ -1,0 +1,46 @@
+.button {
+    display: block !important;
+    position: relative;
+    margin: 10px;
+    float: right;
+    background: transparent;
+    border: none;
+    width: 30px;
+    height: 30px;
+    &>div {
+        position: absolute;
+        width: 100%;
+        height: 20%;
+        background-color: white;
+        border-radius: 10px;
+        transition: 0.3s;
+        box-shadow: 0 0 5px black;
+    }
+}
+
+.firstLine {
+    transform: translateY(-150%);
+}
+.fourthLine {
+    transform: translateY(150%);
+}
+
+.opened {
+    &>div {
+        box-shadow: none;
+    }
+    .firstLine {
+        transform: translateY(-250%);
+        opacity: 0;
+    }
+    .fourthLine {
+        transform: translateY(250%);
+        opacity: 0;
+    }
+    .secondLine {
+        transform: rotate(45deg)
+    }
+    .thirdLine {
+        transform: rotate(-45deg)
+    }
+}

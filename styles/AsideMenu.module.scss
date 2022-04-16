@@ -1,0 +1,110 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("../src/fonts/Roboto-Medium.ttf");
+}
+
+.asideMenu {
+    position: absolute;
+    background-color: transparent;
+    height: 90vh;
+    width: 0vw;
+    min-width: 50px;
+    transition: 0.3s;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 100%;
+    justify-content: space-between;
+    overflow-x: hidden;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    * {
+        display: none;
+    }
+    button {
+        background: transparent;
+        text-transform: uppercase;
+        border: 1px solid white;
+        border-radius: 15px;
+        color: white;
+        font-size: 1.4rem;
+        cursor: pointer;
+        width: 50%;
+        margin: 0px auto;
+        transition: 0.2s;
+        &:hover {
+            background-color: white;
+            color: black;
+        }
+    }
+}
+
+.listsContainer{
+    width: 200%;
+    display: flex !important;
+    justify-content: space-between;
+}
+
+.playlistsContainer, .tracksContainer {
+    color: white;
+    flex-direction: column;
+    padding-left: 20px;
+    font-size: 1.5rem;
+    font-family: "Roboto";
+    font-weight: 0;
+    width: 50%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: 0.3s;
+    & > p {
+        display: block !important;
+        width: 80%;
+        cursor: pointer;
+        white-space: nowrap;
+
+        &:after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background-color: white;
+            transition: 0.3s ease-in-out;
+        }
+        &:hover {
+            white-space: normal;
+            &:after {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.tracksContainer {
+    :nth-child(2) {
+        margin-top: 40px;
+    }
+}
+
+.opened {
+    background-color: darken(rgba(black, 0.8), 30%);
+    width: 25vw;
+    .mainContainer {
+        * {
+            display: initial;
+        }
+    }
+}
+
+//Media queries
+
+@media all and (max-width: 1250px) {
+    .opened {
+        width: 80vw;
+    }
+}

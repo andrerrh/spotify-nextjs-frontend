@@ -1,0 +1,46 @@
+$mainColor: rgb(37, 37, 37);
+
+.mainBackground {
+    position: absolute;
+    background-color: $mainColor;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    &:before {
+        content: '';
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+    }
+}
+
+.mainContainer {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+.displayContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90%;
+    
+    .currentImageContainer {
+        box-shadow: 0 0 50px white;
+        border-radius: 5px;
+        background-color: white;
+        width: min(50vh, 80vw);
+        height: min(50vh, 80vw);
+        img {
+        border-radius: 5px;
+            width: min(50vh, 80vw);
+            height: min(50vh, 80vw);
+        }
+    }
+}

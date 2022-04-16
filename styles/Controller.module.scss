@@ -1,0 +1,89 @@
+.controllerContainer {
+    background-color: darken(rgba(black, 0.8), 30%);
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.playbackBarContainer {
+    width: 30%;
+    height: 10px;
+    input {
+        width: 100%;
+        -webkit-appearance: none;
+        height: 3px;
+        background: #d3d3d3;
+        outline: none;
+        opacity: 0.7;
+        cursor: pointer;
+        transition: opacity 0.2s;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 10px;
+            height: 10px;
+            background: #00ff80;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        &::-moz-range-thumb {
+            width: 10px;
+            height: 10px;
+            background: #00ff80;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    }
+}
+
+.trackInfo {
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    white-space: nowrap;
+}
+
+.controller {
+    width: 10%;
+    display: flex;
+    justify-content: space-around;
+    button {
+        background: transparent;
+        border: 0;
+        color: grey;
+        cursor: pointer;
+        font-size: 1.5rem;
+        &:hover {
+            color: white;
+        }
+    }
+}
+
+.volumeContainer {
+    color: white;
+}
+
+@media all and (max-width: 1250px) {
+    .playbackBarContainer {
+        width: 50%;
+    }
+
+    .trackInfo {
+        font-size: 1rem;
+    }
+
+    .controller {
+        width: 50%;
+    }
+}
