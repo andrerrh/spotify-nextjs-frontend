@@ -12,6 +12,6 @@ export default function getPlaylists(req, res) {
 				res.status(200).send(JSON.stringify(data))
 				resolve()
 			})
-			.catch(err => send(err))
+			.catch(err => res.send(err))
 	})
 }
